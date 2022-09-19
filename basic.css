@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+div {
+    border: 5px solid #999;
+    background: powderblue;
+    box-sizing: border-box;
+    line-height: 200px;
+}
+
+div>div {
+    border: 2px solid #cf3939;
+    background: pink;
+}

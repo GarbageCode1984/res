@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header, aside, article, footer{
+            border: 1px solid #666;
+            padding: 20px;
+            margin: 10px;
+        }
+        .pc{
+            display: none;
+            background-color: #ccc;
+        }
+        aside li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .div2 > div {
+            background-color: powderblue;
+            margin:10px;
+        }
+        footer{
+            text-align: center;
+        }
+
+        /* 600px~ 큰모바일~태블릿 */
+        @media (min-width:600px){
+            .div2{ display: flex; }
+            .div2 > div { flex: 1; }
+        }
+
+        /* 960px~ 데스크탑 */
+        @media (min-width: 960px){
+            main{ display: flex; }
+            aside{ width:20%; }
+            aside li { display:block; }
+            section{ width: 80% }
+            .pc {
+                display: block;
+            }
+        }
+
+        /* 1400px~ 큰 데스크탑 */
+        @media (min-width: 1400px){
+            main, .header_wrap{
+                width: 1400px; margin: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1>Responsive Layout</h1>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <ul>
+                <li>MENU_1</li>
+                <li>MENU_2</li>
+                <li>MENU_3</li>
+                <li>MENU_4</li>
+                <li>MENU_5</li>
+            </ul>
+        </aside>
+        <section>
+            <article>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </article>
+            <article>
+                <p class="pc">Why do we use it?
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </article>
+            <article>
+                <p class="pc">Why do we use it?
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </article>
+            <article class="div2">
+                <div>Where does it come from?
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin 
+                </div>
+                <div>Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum</div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        Responsive LayerOut Practice
+    </footer>
+</body>
+</html>
